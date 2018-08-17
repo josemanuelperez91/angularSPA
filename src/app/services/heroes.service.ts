@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ConsultaHeroesComponent } from '../components/consulta-heroes/consulta-heroes.component';
 
 @Injectable()
 export class HeroesService {
@@ -79,4 +80,18 @@ private heroes:any[] = [
   getHeroe( idx: number) {
     return this.heroes[idx];
   }
+  consultaHeroes(consulta: string) {
+
+    const heroesEncontrados: string[] = [];
+
+    for (const heroe of this.heroes) {
+      const nombre = heroe.nombre.toLowerCase();
+      if (nombre.indexOf(consulta) >= 0) {
+        heroesEncontrados.push(heroe);
+      }
+    }
+    return heroesEncontrados;
+
+  }
+ 
 }

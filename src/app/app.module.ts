@@ -12,11 +12,13 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
-
-// Servicioes
+import { HeroeComponent } from './components/heroe/heroe.component';
+import { ConsultaHeroesComponent } from './components/consulta-heroes/consulta-heroes.component';
+// Servicios
 
 import { HeroesService } from './services/heroes.service';
-import { HeroeComponent } from './components/heroe/heroe.component';
+import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
+
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { HeroeComponent } from './components/heroe/heroe.component';
     HomeComponent,
     AboutComponent,
     HeroesComponent,
-    HeroeComponent
+    HeroeComponent,
+    ConsultaHeroesComponent,
+    HeroeTarjetaComponent
   ],
   imports: [
     BrowserModule,
